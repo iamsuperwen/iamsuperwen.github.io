@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Topics on Keep it up!</title>
-    <link>/topics/</link>
+    <link>https://iamsuperwen.github.io/topics/</link>
     <description>Recent content in Topics on Keep it up!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -10,7 +10,7 @@
     <webMaster>iamsuperwen@gmail.com (iamsuperwen)</webMaster>
     <copyright>(c) 2018 Copypaste</copyright>
     
-	<atom:link href="/topics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://iamsuperwen.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

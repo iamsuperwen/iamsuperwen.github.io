@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Markdown on Keep it up!</title>
-    <link>/tags/markdown/</link>
+    <link>https://iamsuperwen.github.io/tags/markdown/</link>
     <description>Recent content in Markdown on Keep it up!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2018 Copypaste</copyright>
     <lastBuildDate>Tue, 05 Jun 2018 03:15:48 +0800</lastBuildDate>
     
-	<atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://iamsuperwen.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Tech] VScode</title>
-      <link>/2018/06/05/tech_vscode/</link>
+      <link>https://iamsuperwen.github.io/2018/06/05/tech_vscode/</link>
       <pubDate>Tue, 05 Jun 2018 03:15:48 +0800</pubDate>
       <author>iamsuperwen@gmail.com (iamsuperwen)</author>
-      <guid>/2018/06/05/tech_vscode/</guid>
+      <guid>https://iamsuperwen.github.io/2018/06/05/tech_vscode/</guid>
       <description>&lt;p&gt;Sharp tools make good work. (工欲善其事, 必先利其器!)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Environment &amp;amp; tools&lt;/strong&gt; for &lt;em&gt;Coding &amp;amp; Note taking.&lt;/em&gt;&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on Keep it up!</title>
-    <link>/tags/books/</link>
+    <link>https://iamsuperwen.github.io/tags/books/</link>
     <description>Recent content in Books on Keep it up!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2018 Copypaste</copyright>
     <lastBuildDate>Fri, 15 Jun 2018 15:16:01 +0800</lastBuildDate>
     
-	<atom:link href="/tags/books/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://iamsuperwen.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Book] Head First C (Part2)</title>
-      <link>/2018/06/15/book_head_first_c2/</link>
+      <link>https://iamsuperwen.github.io/2018/06/15/book_head_first_c2/</link>
       <pubDate>Fri, 15 Jun 2018 15:16:01 +0800</pubDate>
       <author>iamsuperwen@gmail.com (iamsuperwen)</author>
-      <guid>/2018/06/15/book_head_first_c2/</guid>
+      <guid>https://iamsuperwen.github.io/2018/06/15/book_head_first_c2/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;2.5.Strings @[]&lt;/li&gt;
 &lt;li&gt;3.Create Small Tools
@@ -40,10 +40,10 @@
     
     <item>
       <title>[Book] Head First C (Part1)</title>
-      <link>/2018/06/06/book_head_first_c1/</link>
+      <link>https://iamsuperwen.github.io/2018/06/06/book_head_first_c1/</link>
       <pubDate>Wed, 06 Jun 2018 11:59:30 +0800</pubDate>
       <author>iamsuperwen@gmail.com (iamsuperwen)</author>
-      <guid>/2018/06/06/book_head_first_c1/</guid>
+      <guid>https://iamsuperwen.github.io/2018/06/06/book_head_first_c1/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;0.Intro.&lt;/li&gt;
 &lt;li&gt;1.Getting Started with C&lt;/li&gt;
