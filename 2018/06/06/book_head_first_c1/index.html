@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>[Book] Head First C (Part1)  &middot; Keep it up!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="C programming, Coding, Books, ">
+
+
+<meta property="og:title" content="[Book] Head First C (Part1)  &middot; Keep it up! ">
+<meta property="og:site_name" content="Keep it up!"/>
+<meta property="og:url" content="/2018/06/06/book_head_first_c1/" />
+<meta property="og:locale" content="en">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2018-06-06T11:59:30&#43;08:00" />
+<meta property="og:article:modified_time" content="2018-06-06T11:59:30&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="C programming">
+    
+<meta property="og:article:tag" content="Coding">
+    
+<meta property="og:article:tag" content="Books">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="[Book] Head First C (Part1)" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="/2018/06/06/book_head_first_c1/" />
+<meta name="twitter:domain" content="/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "[Book] Head First C (Part1)",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2018-06-06",
+    "description": "",
+    "wordCount": 888
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="/2018/06/06/book_head_first_c1/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.46" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="/css/bootswatch/flatly/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight/tomorrow-night-eighties.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="" src="">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+              
+                <a href="/" >
+                  <i class='fa fa-folder-open-o'></i>
+                  Home
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/post/" >
+                  <i class='fa fa-tags'></i>
+                  Post
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/about/" >
+                  <i class='fa fa-hand-o-right'></i>
+                  About
+                </a>
+              
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="title-metas text-center">
+
+    <h1>[Book] Head First C (Part1)
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2018-06-06">2018-06-06</time>
+</small>
+
+
+  <small>
+  &middot; 5 min read
+  &middot; (888 words)
+  
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="/tags/c-programming" class="label label-primary">C programming</a>
+  
+  <a href="/tags/coding" class="label label-primary">Coding</a>
+  
+  <a href="/tags/books" class="label label-primary">Books</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+
+      <div class="content">
+  <ul>
+<li>0.Intro.</li>
+<li>1.Getting Started with C</li>
+<li>2.Memory &amp; Pointers</li>
+</ul>
+
+<p></p>
+
+<hr />
+
+<h1 id="0-intro">0. Intro</h1>
+
+<h2 id="q-how-to-learn-anything-efficiently">Q: How to learn (anything) efficiently?</h2>
+
+<ul>
+<li>Be serious about it. &ndash;&gt; This <strong><em>MATTERS</em></strong> !!!</li>
+<li>Understand &ndash;&gt; Remember</li>
+<li>Multiple learning types
+
+<ul>
+<li>Pictures</li>
+<li>Conversation</li>
+<li>Read out loud</li>
+<li>…</li>
+<li><strong><em>WRITE A LOT OF CODE!!!</em></strong>  &ndash;&gt; Practice, Practice, Practice.</li>
+</ul></li>
+</ul>
+
+<h2 id="gcc-gnu-compiler-collection">GCC (Gnu Compiler Collection)</h2>
+
+<ul>
+<li><em>Collection:</em> for multi programming lang.</li>
+<li>Compiler on Windows:
+
+<ul>
+<li><a href="https://www.cygwin.com">Cygwin</a>: Simulation of Unix environment, including <em>gcc</em></li>
+<li><a href="http://www.mingw.org">MinGW (Minimalist GNU for Windows)</a>: make programs work on Windows.</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<hr />
+
+<h1 id="1-getting-started-with-c">1. Getting Started with C</h1>
+
+<h2 id="features-of-c">Features of C</h2>
+
+<ul>
+<li>Low level</li>
+
+<li><p>Advantages</p>
+
+<ul>
+<li>Speed</li>
+<li>Space</li>
+<li>Portability (Cross-platform, <a href="https://en.wikipedia.org/wiki/Write_once,_compile_anywhere">WOCA</a> )</li>
+</ul></li>
+
+<li><p>Three C standards</p>
+
+<ul>
+<li>ANSI C (=C89, 1989)</li>
+<li>@ C89 &ndash;&gt; C99
+
+<ul>
+<li>semi-dynamic allocate. (eg. <code>int array[int_var];</code>) <a href="http://ocw.nctu.edu.tw/course_detail-v.php?bgid=9&amp;gid=0&amp;nid=419&amp;v5=v1MVDoXD3aM">ref</a></li>
+</ul></li>
+<li>C99 (1999)</li>
+<li>C11 (2011)</li>
+<li>@ C99 &ndash;&gt; C11 <a href="https://zh.wikipedia.org/wiki/C11"><strong>Changes</strong></a>:
+
+<ul>
+<li>Don&rsquo;t need <code>return 0;</code> at the end of main()</li>
+<li><del>gets()</del> &ndash;&gt; <strong>gets_s()</strong></li>
+<li>…</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="c-standard-library">C standard library</h2>
+
+<ul>
+<li><p><strong>stdio.h</strong>: Allow read/write data from/to terminal.</p>
+
+<ul>
+<li><strong>puts()</strong>: Display a string on cmd prompt/terminal.</li>
+</ul></li>
+
+<li><p><strong>stdlib.h</strong>: eg. NULL, malloc(), rand(), atoi(), abs(), exit(), system() …</p>
+
+<ul>
+<li><strong>atoi()</strong>: Convert string to int.</li>
+<li>Eg. <code>intVar = atoi(strVar);</code></li>
+<li><strong><a href="http://www.cplusplus.com/reference/cstdio/sprintf/">sprintf()</a></strong>: Write formatted data to string.</li>
+<li>Eg.  <code>charNum = sprintf(outStr, &quot;Format String: %d, %s\n&quot;, intVar, inStr);</code></li>
+<li>@[C] printf format</li>
+</ul></li>
+
+<li><p>@Ref:</p>
+
+<ul>
+<li><a href="http://tw.gitbook.net/c_standard_library/20130920395.html">List: C語言標準庫</a>
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>assert.h</strong></td>
+<td><strong>ctype.h</strong></td>
+<td><strong>errno.h</strong></td>
+<td><strong>float.h</strong></td>
+<td><strong>limits.h</strong></td>
+</tr>
+
+<tr>
+<td><strong>locale.h</strong></td>
+<td><strong>math.h</strong></td>
+<td><strong>setjmp.h</strong></td>
+<td><strong>signal.h</strong></td>
+<td><strong>stdarg.h</strong></td>
+</tr>
+
+<tr>
+<td><strong>stddef.h</strong></td>
+<td><strong>stdio.h</strong></td>
+<td><strong>stdlib.h</strong></td>
+<td><strong>string.h</strong></td>
+<td><strong>time.h</strong></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<hr />
+
+<h2 id="processes-of-c-programs">💥 Processes of C programs</h2>
+
+<ul>
+<li><p>Steps:</p>
+
+<ol>
+<li>source code: <strong>hello.c</strong>  <em>// c src code that should be preprocessed.</em>
+
+<ul>
+<li>+header.h
+<br>↓ <em>Preprocessor</em></li>
+</ul></li>
+<li>expanded ~:  <strong>hello.i</strong>  <em>// c src code that should <strong>not</strong> be preprocessed.</em>
+
+<ul>
+<li><code>gcc -E hello.c -o hello.i</code>  <em>//<strong>-E:</strong> Preprocess, <del>compile</del></em>
+<br>↓ <em>Compiler</em></li>
+</ul></li>
+<li>assembly:    <strong>hello.s</strong>  <em>// assembler code.</em>
+
+<ul>
+<li><code>gcc -S hello.i -o hello.s</code>  <em>//<strong>-S:</strong> Compilation, <del>assemble</del></em>
+<br>↓ <em>Assembler</em></li>
+</ul></li>
+<li>Object:      <strong>hello.o</strong>
+
+<ul>
+<li><code>gcc -c hello.s -o hello.o</code>  <em>//<strong>-c:</strong> Compile, assemble, <del>link</del></em>
+<br>↓ <em>Linker</em>  +(.lib .a)</li>
+</ul></li>
+<li>exe code:    <strong>hello(.exe)</strong>
+
+<ul>
+<li><code>gcc hello.o -o hello(.exe)</code>
+<br>↓ <em>Loader</em>  +(.dll .so)</li>
+</ul></li>
+<li>Execute!</li>
+</ol>
+
+<ul>
+<li>2~4: Build</li>
+<li>5~6: Run</li>
+<li>Ref.
+
+<ol>
+<li><a href="https://codingmeta.com/create-a-program-c/">Create a program – C – CodingMeta</a></li>
+<li><a href="https://fresh2refresh.com/c-programming/c-preprocessor-directives/">C Preprocessor directives</a></li>
+<li><a href="http://armsword.com/2012/11/27/some-methods-about-gcc-and-gdb/">编译和调试C/C++程序常用到的一些知识点 - armsword的涅槃之地</a></li>
+<li><a href="https://linux.die.net/man/1/gcc">gcc man</a></li>
+<li>[<em>Head First C</em>, Chap4.]
+<br /></li>
+</ol></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<ul>
+<li><p>Program start from <strong>main</strong>, and:</p>
+
+<ul>
+<li>return 0: success</li>
+<li>return <em>others</em>: false</li>
+<li>C99: <code>-std=c99</code>, auto return
+
+<ul>
+<li>Eg. <code>gcc -std=c99 test.c -o test_program</code></li>
+<li>@ <code>-std=c99 -pedantic</code> ??</li>
+</ul></li>
+</ul></li>
+
+<li><p>Cmd to check newest <strong>exit status</strong>:</p>
+
+<ul>
+<li>Linux/ Mac: <code>echo $?</code></li>
+<li>Windows: <code>echo %ErrorLevel%</code></li>
+</ul></li>
+
+<li><p>Compile and run: <code>gcc test.c -o test &amp;&amp; ./test</code>
+<br>On Unix-style operating systems, programs are run only if you:</p>
+
+<ol>
+<li>specify the directory(path)</li>
+<li>the directory is listed in the PATH environment variable.
+
+<ul>
+<li><code>.</code>: current dir</li>
+<li><code>..</code>: parent dir</li>
+<li><code>./</code> specify the path of current directory</li>
+</ul></li>
+</ol></li>
+</ul>
+
+<hr />
+
+<h2 id="control-statements">Control Statements</h2>
+
+<ul>
+<li><p><strong>switch</strong> v.s. <strong>if-else</strong></p>
+
+<ul>
+<li><strong>switch</strong>: multi-check in same variable.</li>
+</ul></li>
+
+<li><p><code>break;</code> v.s. <code>continue;</code></p></li>
+</ul>
+
+<hr />
+
+<hr />
+
+<h1 id="2-memory-pointers">2. Memory &amp; Pointers</h1>
+
+<ul>
+<li><strong>Pointers</strong> are just variables that store memory addresses.</li>
+</ul>
+
+<h2 id="memory-layout">💥 Memory Layout</h2>
+
+<p><img src="/images/20180614_memory_layout.PNG" alt="alt text" title="C programs memory layout" /></p>
+
+<ul>
+<li>Ref.
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Data_segment">Data segment - Wikipedia</a></li>
+<li><a href="https://blog.gtwang.org/programming/memory-layout-of-c-program/">C 語言程式的記憶體配置概念教學 - G. T. Wang</a></li>
+<li><a href="https://www.geeksforgeeks.org/memory-layout-of-c-program/">Memory Layout of C Programs - GeeksforGeeks</a></li>
+</ol></li>
+</ul>
+
+<p><br></p>
+
+<ul>
+<li>Variable location
+
+<ol>
+<li><strong>Stack</strong>: local var.  //address: high &ndash;&gt; low; pop!</li>
+<li><strong>Heap</strong>: malloc()  //address: low &ndash;&gt; high</li>
+<li><strong>Globals</strong>: global var.</li>
+<li><strong>Constants</strong>: const var. //string literal <code>char *card=&quot;JQK&quot;;</code> <em>(Read-only!!)</em></li>
+<li><strong>Code</strong></li>
+</ol></li>
+</ul>
+
+<hr />
+
+<h2 id="array-v-s-pointer">⭐️ Array v.s. Pointer</h2>
+
+<ul>
+<li><p>Pointer var.</p>
+
+<ul>
+<li><code>&amp;</code> <strong>where</strong>: find address of a <em>variable</em>.</li>
+<li><code>*</code> <strong>dereference</strong>: read/set contents of a memory <em>address</em>.</li>
+</ul></li>
+
+<li><p><code>*array == array[0]</code> , <code>*(array+2) == array[2]</code></p>
+
+<ul>
+<li>No matter what <em>data types</em> they have!</li>
+<li>**Pointer variables have types so they can adjust pointer arithmetic.</li>
+</ul></li>
+
+<li><p>Array variables can be used as pointers, but array variables are not quite the same&hellip;</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Array</th>
+<th>Pointer</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Eg.</td>
+<td><code>char a[] = &quot;How big is it?&quot;;</code></td>
+<td><code>char *p = a;</code></td>
+</tr>
+
+<tr>
+<td>1. sizeof()</td>
+<td>string/char array size<br><em>sizeof(a) = 15;</em></td>
+<td>4 or 8 bytes (32- or 64-bit)<br><em>sizeof(p) = 4 or 8;</em></td>
+</tr>
+
+<tr>
+<td>2. address <code>&amp;</code></td>
+<td>&amp;a == a;</td>
+<td>&amp;p: address of p variable</td>
+</tr>
+
+<tr>
+<td>3. re-point<br>(when create, &hellip;)</td>
+<td>✖️<br>allocate space to store the array <code>a[]</code>;<br>but no space for array variable <code>a</code></td>
+<td>✔️<br>allocate 4 or 8 bytes to store the ptr.</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>pointer decay</strong>: assign an array to a ptr (when passing to a function), ptr only contain <em>address</em> without the <del><em>size</em></del>.  (p59.)</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="string-literals-v-s-char-screenshot">string literals v.s. char (Screenshot)</h2>
+
+<p><img src="/images/20180615_headfirstC_string_vs_array1.png" alt="alt text" title="string literals are constants" /></p>
+
+<hr />
+
+<h3 id="string-literals">*string literals</h3>
+
+<ul>
+<li><strong>ptr</strong> <em>(address)</em> to <strong>string literals</strong> <em>(constants)</em>.</li>
+<li>Can NOT be update.</li>
+</ul>
+
+<p><img src="/images/20180615_headfirstC_string_vs_array2.png" alt="alt text" title="char *cards = &quot;JQK&quot;;" /></p>
+
+<hr />
+
+<h3 id="char-array">char array[]</h3>
+
+<ul>
+<li>no space for the array variable, only allocate space to store the contents.</li>
+<li><strong>copy</strong> string literals (const) to a new array to modify.</li>
+<li>array content can be modified.</li>
+</ul>
+
+<p><img src="/images/20180615_headfirstC_string_vs_array3.png" alt="alt text" title="char cards[] = &quot;JQK&quot;;" /></p>
+
+<hr />
+
+<h3 id="tips">Tips</h3>
+
+<ul>
+<li>String literals are stored in read-only memory.</li>
+<li>If you want to modify a string, you need to make a <strong>copy</strong> in a new array.</li>
+<li>You can declare a char pointer as <code>const char *</code> to prevent the code from using it to modify a string</li>
+</ul>
+
+<p><img src="/images/20180615_headfirstC_string_vs_array5.png" alt="alt text" title="&quot;char cards[]&quot; v.s. &quot;char *cards&quot;" /></p>
+
+<p><br></p>
+
+<hr />
+
+<h2 id="scanf-v-s-fgets">⭐️ scanf() v.s. fgets()</h2>
+
+<table>
+<thead>
+<tr>
+<th>(p68.)</th>
+<th><a href="http://www.cplusplus.com/reference/cstdio/scanf/">scanf()</a></th>
+<th><a href="http://www.cplusplus.com/reference/cstdio/fgets/">fgets()</a></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Usage</td>
+<td><code>int scanf ( const char * format, ... );</code></td>
+<td><code>char * fgets ( char * str, int num, FILE * stream );</code></td>
+</tr>
+
+<tr>
+<td>Eg. <code>char food[5];</code></td>
+<td><code>scanf(&quot;%4s&quot;, food);</code> //return value=1</td>
+<td><code>fgets(food, sizeof(food), stdin);</code>  //sizeof(food)=5</td>
+</tr>
+
+<tr>
+<td>param.</td>
+<td><code>%[*][width][length]specifier</code><br>similar to @<em>printf format</em></td>
+<td>[str]: ptr of char array<br>[num]: max num<br>[stream]: ptr of input FILE</td>
+</tr>
+
+<tr>
+<td>return</td>
+<td>[int]: #num of arguments successfully filled</td>
+<td>[char*]: returns <em>str</em>.</td>
+</tr>
+
+<tr>
+<td>1. Safty(limit)</td>
+<td>remember!</td>
+<td>mandatory</td>
+</tr>
+
+<tr>
+<td>2. Multiple fields</td>
+<td>✔️ structured data, use [format]</td>
+<td>✖️ string buffer*1</td>
+</tr>
+
+<tr>
+<td>3. Space in string</td>
+<td>hit space, <code>%s</code> stops <br> @Regular expression</td>
+<td>read whole string (terminate: newline/EOF)<br>❗️(and add <strong>newline</strong>, if it exist)</td>
+</tr>
+
+<tr>
+<td>When to use which?</td>
+<td><strong>structured data</strong></td>
+<td><strong>single unstructured string</strong></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Limit string&rsquo;s length to prevent <strong>buffer overflows</strong>. (<strong>segmentation fault</strong>/ <strong>abort trap</strong> &ndash;&gt; cause bugs. &ndash;&gt; crash)  (p66.)</li>
+<li><a href="http://www.cplusplus.com/reference/cstdio/gets/"><del><strong>gets()</strong></del></a>: Danger, don&rsquo;t use.</li>
+</ul>
+
+<p><br></p>
+
+<hr />
+
+<hr />
+
+<p><br></p>
+
+<h1 id="todo">@TODO</h1>
+
+<ul>
+<li>(p56.) sizeof,  size_t</li>
+<li>scanf (%[^\n])?? &ndash;&gt; string?!
+<a href="https://www.studytonight.com/c/string-and-character-array.php">https://www.studytonight.com/c/string-and-character-array.php</a></li>
+
+<li><p>(p67.) function signature?? what is ~?
+<a href="https://www.quora.com/What-are-function-signatures-in-C-programming-language">https://www.quora.com/What-are-function-signatures-in-C-programming-language</a></p></li>
+
+<li><p>[ ] <a href="https://en.wikipedia.org/wiki/C_standard_library">C Standard library</a></p></li>
+
+<li><p>[ ] head first C</p>
+
+<ul>
+<li>@argument v.s. parameter (?)</li>
+<li>@Kelly Criterion (?)</li>
+</ul></li>
+
+<li><p>[ ] others</p>
+
+<ul>
+<li>@pragma</li>
+</ul></li>
+</ul>
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f06%2f06%2fbook_head_first_c1%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%5bBook%5d%20Head%20First%20C%20%28Part1%29&amp;url=%2f2018%2f06%2f06%2fbook_head_first_c1%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2018%2f06%2f06%2fbook_head_first_c1%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2018%2f06%2f06%2fbook_head_first_c1%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f06%2f06%2fbook_head_first_c1%2f&amp;title=%5bBook%5d%20Head%20First%20C%20%28Part1%29" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%5bBook%5d%20Head%20First%20C%20%28Part1%29&amp;body=Check out this site %2f2018%2f06%2f06%2fbook_head_first_c1%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="/2018/06/06/c_printf_scanf/" title="[C] printf &amp; scanf">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="/2018/06/06/blog_hugo/" title="[Blog] Hugo Notes">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//your_disqus_shortname.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+</style>
+<div class="article-toc">
+  <br>
+  
+    <div class="section">
+      <header><div class="title">TableOfContents</div></header>
+      <div class="list-default"><nav id="TableOfContents">
+<ul>
+<li><a href="#0-intro">0. Intro</a>
+<ul>
+<li><a href="#q-how-to-learn-anything-efficiently">Q: How to learn (anything) efficiently?</a></li>
+<li><a href="#gcc-gnu-compiler-collection">GCC (Gnu Compiler Collection)</a></li>
+</ul></li>
+<li><a href="#1-getting-started-with-c">1. Getting Started with C</a>
+<ul>
+<li><a href="#features-of-c">Features of C</a></li>
+<li><a href="#c-standard-library">C standard library</a></li>
+<li><a href="#processes-of-c-programs">💥 Processes of C programs</a></li>
+<li><a href="#control-statements">Control Statements</a></li>
+</ul></li>
+<li><a href="#2-memory-pointers">2. Memory &amp; Pointers</a>
+<ul>
+<li><a href="#memory-layout">💥 Memory Layout</a></li>
+<li><a href="#array-v-s-pointer">⭐️ Array v.s. Pointer</a></li>
+<li><a href="#string-literals-v-s-char-screenshot">string literals v.s. char (Screenshot)</a>
+<ul>
+<li><a href="#string-literals">*string literals</a></li>
+<li><a href="#char-array">char array[]</a></li>
+<li><a href="#tips">Tips</a></li>
+</ul></li>
+<li><a href="#scanf-v-s-fgets">⭐️ scanf() v.s. fgets()</a></li>
+</ul></li>
+<li><a href="#todo">@TODO</a></li>
+</ul>
+</nav></div>
+    </div>
+    <hr>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="/2018/06/16/c_string/">[C] Strings</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/15/book_head_first_c2/">[Book] Head First C (Part2)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/09/c_datatype_sizeof/">[C] Data Type &amp; sizeof</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/blog_hugo/">[Blog] Hugo Notes</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/book_head_first_c1/">[Book] Head First C (Part1)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/c_printf_scanf/">[C] printf &amp; scanf</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/05/tech_vscode/">[Tech] VScode</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>Tags</b></div></header>
+
+        <div class="content">
+          <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/coding">Coding (6)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/c-programming">C programming (5)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/books">Books (2)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/blog">Blog (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/markdown">Markdown (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/tech">Tech (1)</a></li>
+            
+
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+  
+</div>
+    
+
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2018 Copypaste
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script src="/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER =  false , 
+EXPIRE_COOKIE =  5 , 
+SHOW_MODAL_TIMEOUT =  10000 , 
+MOUSE_LEAVE =  true , 
+MODAL_SIZE = "", 
+POST_URL = "https://zapier.com/hooks/...", 
+SIGNUP_HEADER = "Join Our Newsletter",
+HEADER_IMAGE = "//placehold.it/1000x600",
+IMG_DESCRIPTION = "Placeholder image for this popover modal optin form",
+SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.",
+INPUT_PLACEHOLDER = "Enter your email",
+SUBMIT_BUTTON = "Subscribe",
+SUCCESS_MESSAGE = "Thanks for your subscription!",
+ERROR_MESSAGE = "Submitting form failed!",
+OPTIN =  true ,
+COOKIE_NAME = "mycookie1",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

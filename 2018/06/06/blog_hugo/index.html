@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>[Blog] Hugo Notes  &middot; Keep it up!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="Blog, ">
+
+
+<meta property="og:title" content="[Blog] Hugo Notes  &middot; Keep it up! ">
+<meta property="og:site_name" content="Keep it up!"/>
+<meta property="og:url" content="/2018/06/06/blog_hugo/" />
+<meta property="og:locale" content="en">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2018-06-06T13:51:52&#43;08:00" />
+<meta property="og:article:modified_time" content="2018-06-06T13:51:52&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Blog">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="[Blog] Hugo Notes" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="/2018/06/06/blog_hugo/" />
+<meta name="twitter:domain" content="/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "[Blog] Hugo Notes",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2018-06-06",
+    "description": "",
+    "wordCount": 435
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="/2018/06/06/blog_hugo/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.46" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="/css/bootswatch/flatly/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight/tomorrow-night-eighties.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="" src="">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+              
+                <a href="/" >
+                  <i class='fa fa-folder-open-o'></i>
+                  Home
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/post/" >
+                  <i class='fa fa-tags'></i>
+                  Post
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/about/" >
+                  <i class='fa fa-hand-o-right'></i>
+                  About
+                </a>
+              
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="title-metas text-center">
+
+    <h1>[Blog] Hugo Notes
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2018-06-06">2018-06-06</time>
+</small>
+
+
+  <small>
+  &middot; 3 min read
+  &middot; (435 words)
+  
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="/tags/blog" class="label label-primary">Blog</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+
+      <div class="content">
+  <p>Documenting the blogging process.</p>
+
+<p></p>
+
+<hr />
+
+<h1 id="simple-concept-cheat-sheet">Simple Concept &amp; Cheat sheet</h1>
+
+<h2 id="directory-structure">Directory Structure</h2>
+
+<ul>
+<li><a href="https://gohugo.io/getting-started/directory-structure/">gohugo - getting started</a></li>
+<li><a href="https://www.youtube.com/watch?v=sB0HLHjgQ7E">Giraffe Academy - tutorial 4</a></li>
+</ul>
+
+<pre><code>.
+├── archetypes   // default template
+├── config.toml  // configuration
+├── content      // post folder, home, ...
+├── data         // store other config data (yaml,toml, json)
+├── layouts      // custom template (html), overwrite themes
+├── static       // styles (css,js)
+└── themes  .    // structure as above
+            ├── archetypes
+            ├── config.toml
+            ├── content
+            ├── data
+            ├── layouts
+            ├── static
+            └── themes
+</code></pre>
+
+<h2 id="basic-command">Basic Command</h2>
+
+<ul>
+<li><code>hugo new site SITE_NAME</code>  // create the above structured directory</li>
+<li><code>hugo new PAGE_NAME.md</code>  // generate new page</li>
+<li><code>hugo serve -D</code>  // preview in localhost:1313, <code>-D</code>: view drafts</li>
+<li><code>hugo version</code>  // check the version, or if it exists.</li>
+</ul>
+
+<h2 id="resource">Resource</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qtIqKaDlqXo&amp;list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3">Giraffe Academy tutorial playlist</a></li>
+</ul>
+
+<hr />
+
+<hr />
+
+<h1 id="dev-notes">Dev. Notes</h1>
+
+<h2 id="theme">Theme</h2>
+
+<ul>
+<li>Candidates:</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Pros(+)</th>
+<th>Cons(-)</th>
+<th>Comments</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>✔️ <a href="https://github.com/appernetic/hugo-bootstrap-premium"><strong>hugo-bootstrap-premium</strong></a></td>
+<td>- Good looking<br> - support Bootstrap(?)</td>
+<td>messy/complex structure</td>
+<td>- link from: <a href="https://disaev.me/p/blog-engines-and-static-site-generators/">this blog</a><br> - free Bootstrap theme: <a href="https://bootswatch.com/">Bootswatch</a></td>
+</tr>
+
+<tr>
+<td><a href="https://themes.gohugo.io/bootstrap/">hugo-bootstrap</a></td>
+<td>- clear structure<br> - support Bootstrap</td>
+<td>above styles are better (fonts, icons)</td>
+<td>build my own!</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/carsonip/hugo-theme-minos">minos</a></td>
+<td>- simple &amp; clear<br> - flooting <em>smart</em> toc</td>
+<td>- too plain&hellip;<br> - do not like the fonts</td>
+<td>link from: <a href="https://blog.yjtseng.info/post/website/">this blog</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc-table-of-content">ToC (Table of Content)</h2>
+
+<ul>
+<li>in <code>.html</code>:
+
+<ul>
+<li>Add: <code>{{ .TableOfContents }}</code></li>
+<li>Ref. <a href="https://www.codeooze.com/webdesign/hugo-toc/">https://www.codeooze.com/webdesign/hugo-toc/</a></li>
+</ul></li>
+<li>for <em><strong>hugo-bootstrap-premium</strong></em>:
+
+<ul>
+<li><code>/theme/layouts/_default/single.html</code> &gt; partial <code>/theme/layouts/partial/bloc/content/sidebar.html</code></li>
+</ul></li>
+<li>@TODO:
+
+<ul>
+<li>Change to <a href="https://github.com/carsonip/hugo-theme-minos#features">smart toc</a></li>
+<li>Taxonomies order: Topics, tags</li>
+<li>Floating/Fixed toc (sliding?), how about axonomies??</li>
+</ul></li>
+</ul>
+
+<h2 id="image-path">Image Path</h2>
+
+<ul>
+<li>Place in <code>/SITE_FOLDER/statics/images</code></li>
+<li>Source   <code>![alt text](/images/THIS_IMAGE.PNG &quot;hover to show words&quot;)</code></li>
+<li>Ref. <a href="https://discourse.gohugo.io/t/image-path/1721">https://discourse.gohugo.io/t/image-path/1721</a></li>
+</ul>
+
+<h2 id="count-taxonomies-tags-topics">Count Taxonomies <em>(tags &amp; Topics)</em></h2>
+
+<ul>
+<li>Some sample code:  (in <code>/sidebar.html</code>)</li>
+</ul>
+
+<pre><code>&lt;ul&gt;
+	&lt;!-- Get all posts--&gt;
+	{{ $posts := where .Site.Pages &quot;Type&quot; &quot;post&quot; }}
+	&lt;!-- loop all tags that you've used --&gt;
+	{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+		
+		&lt;!-- (re)set the counter to 0 --&gt;
+		{{ $.Scratch.Set &quot;tagCounter&quot; 0 }}
+		&lt;!-- increment counter if post contains the current tag--&gt;
+		{{ range $posts}}
+			{{ if in .Params.tags $name }}
+				{{ $.Scratch.Add &quot;tagCounter&quot; 1 }}
+			{{ end }}
+		{{ end }}
+		
+		&lt;li&gt;{{ $.Scratch.Get &quot;tagCounter&quot; }} articles in {{ $name }}&lt;/li&gt;
+	{{end}}
+&lt;/ul&gt;
+</code></pre>
+
+<ul>
+<li><p>Credits: <a href="https://discourse.gohugo.io/t/show-count-of-handpicked-categories-or-tags/2369">https://discourse.gohugo.io/t/show-count-of-handpicked-categories-or-tags/2369</a></p></li>
+
+<li><p>Problems:</p>
+
+<ul>
+<li>codes in <code>sidebar.html</code> (not exactly as above), there are some <em>lower cases</em> and <em>upper cases</em> problems, which make it hard to filter/display taxonomy.</li>
+</ul></li>
+
+<li><p>Hugo built-in functions related to ths problem: <br>
+Usage: <code>{{FunctionName ObjectItem}}</code> or <code>{{&quot;ObjectItem&quot; | FunctionName}}</code></p>
+
+<ul>
+<li><a href="https://gohugo.io/functions/humanize/"><strong>humanize</strong></a></li>
+<li><a href="https://gohugo.io/functions/lower/"><strong>lower</strong></a></li>
+<li><a href="https://gohugo.io/functions/singularize/"><strong>singularize</strong></a></li>
+<li>&hellip;</li>
+</ul></li>
+
+<li><p>@TODO: two types of taxonomies:</p>
+
+<ul>
+<li><code>tags</code>: for small keywords, eg. #hashtag, or categorize by programming languages</li>
+<li><code>Topics</code>: for general categories, maybe &laquo;one Post one Topic&raquo;</li>
+<li>Create multicolor tags</li>
+</ul></li>
+</ul>
+
+<h1 id="todo">@ TODO</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> math plugin? mathjax? (eg. power)
+
+<ul>
+<li>(Now) html tag: r<sup>p</sup>: <code>&lt;sup&gt;xxx&lt;/sup&gt;</code></li>
+</ul></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Online this blog(github pages)</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> About page</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> favicon &amp; social media links</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> <a href="#toc-table-of-content">Revised toc</a>; Floating/sticky sidebar</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> <a href="#count-taxonomies-tags-topics">tags &amp; Topics</a></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Learn Bootstrap</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Create my own theme</label></li>
+</ul>
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f06%2f06%2fblog_hugo%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%5bBlog%5d%20Hugo%20Notes&amp;url=%2f2018%2f06%2f06%2fblog_hugo%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2018%2f06%2f06%2fblog_hugo%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2018%2f06%2f06%2fblog_hugo%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f06%2f06%2fblog_hugo%2f&amp;title=%5bBlog%5d%20Hugo%20Notes" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%5bBlog%5d%20Hugo%20Notes&amp;body=Check out this site %2f2018%2f06%2f06%2fblog_hugo%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="/2018/06/06/book_head_first_c1/" title="[Book] Head First C (Part1)">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="/2018/06/09/c_datatype_sizeof/" title="[C] Data Type &amp; sizeof">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//your_disqus_shortname.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+</style>
+<div class="article-toc">
+  <br>
+  
+    <div class="section">
+      <header><div class="title">TableOfContents</div></header>
+      <div class="list-default"><nav id="TableOfContents">
+<ul>
+<li><a href="#simple-concept-cheat-sheet">Simple Concept &amp; Cheat sheet</a>
+<ul>
+<li><a href="#directory-structure">Directory Structure</a></li>
+<li><a href="#basic-command">Basic Command</a></li>
+<li><a href="#resource">Resource</a></li>
+</ul></li>
+<li><a href="#dev-notes">Dev. Notes</a>
+<ul>
+<li><a href="#theme">Theme</a></li>
+<li><a href="#toc-table-of-content">ToC (Table of Content)</a></li>
+<li><a href="#image-path">Image Path</a></li>
+<li><a href="#count-taxonomies-tags-topics">Count Taxonomies <em>(tags &amp; Topics)</em></a></li>
+</ul></li>
+<li><a href="#todo">@ TODO</a></li>
+</ul>
+</nav></div>
+    </div>
+    <hr>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="/2018/06/16/c_string/">[C] Strings</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/15/book_head_first_c2/">[Book] Head First C (Part2)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/09/c_datatype_sizeof/">[C] Data Type &amp; sizeof</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/blog_hugo/">[Blog] Hugo Notes</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/book_head_first_c1/">[Book] Head First C (Part1)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/c_printf_scanf/">[C] printf &amp; scanf</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/05/tech_vscode/">[Tech] VScode</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>Tags</b></div></header>
+
+        <div class="content">
+          <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/coding">Coding (6)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/c-programming">C programming (5)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/books">Books (2)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/blog">Blog (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/markdown">Markdown (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/tech">Tech (1)</a></li>
+            
+
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+  
+</div>
+    
+
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2018 Copypaste
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script src="/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER =  false , 
+EXPIRE_COOKIE =  5 , 
+SHOW_MODAL_TIMEOUT =  10000 , 
+MOUSE_LEAVE =  true , 
+MODAL_SIZE = "", 
+POST_URL = "https://zapier.com/hooks/...", 
+SIGNUP_HEADER = "Join Our Newsletter",
+HEADER_IMAGE = "//placehold.it/1000x600",
+IMG_DESCRIPTION = "Placeholder image for this popover modal optin form",
+SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.",
+INPUT_PLACEHOLDER = "Enter your email",
+SUBMIT_BUTTON = "Subscribe",
+SUCCESS_MESSAGE = "Thanks for your subscription!",
+ERROR_MESSAGE = "Submitting form failed!",
+OPTIN =  true ,
+COOKIE_NAME = "mycookie1",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

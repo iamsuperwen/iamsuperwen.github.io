@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>[C] Strings  &middot; Keep it up!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="C programming, Coding, ">
+
+
+<meta property="og:title" content="[C] Strings  &middot; Keep it up! ">
+<meta property="og:site_name" content="Keep it up!"/>
+<meta property="og:url" content="/2018/06/16/c_string/" />
+<meta property="og:locale" content="en">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2018-06-16T14:00:01&#43;08:00" />
+<meta property="og:article:modified_time" content="2018-06-16T14:00:01&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="C programming">
+    
+<meta property="og:article:tag" content="Coding">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="[C] Strings" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="/2018/06/16/c_string/" />
+<meta name="twitter:domain" content="/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "[C] Strings",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2018-06-16",
+    "description": "",
+    "wordCount": 2038
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="/2018/06/16/c_string/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.46" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="/css/bootswatch/flatly/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight/tomorrow-night-eighties.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="" src="">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+              
+                <a href="/" >
+                  <i class='fa fa-folder-open-o'></i>
+                  Home
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/post/" >
+                  <i class='fa fa-tags'></i>
+                  Post
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/about/" >
+                  <i class='fa fa-hand-o-right'></i>
+                  About
+                </a>
+              
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="title-metas text-center">
+
+    <h1>[C] Strings
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2018-06-16">2018-06-16</time>
+</small>
+
+
+  <small>
+  &middot; 10 min read
+  &middot; (2038 words)
+  
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="/tags/c-programming" class="label label-primary">C programming</a>
+  
+  <a href="/tags/coding" class="label label-primary">Coding</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+
+      <div class="content">
+  <p>String in C.
+<br>Extended from <strong><em>Head First C</em></strong>, Chap 2.5 - Strings.</p>
+
+<p></p>
+
+<hr />
+
+<h1 id="usage-string-h">Usage: string.h</h1>
+
+<table>
+<thead>
+<tr>
+<th>string.h</th>
+<th>Usage</th>
+<th>Def.</th>
+<th>Notes</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strlen/"><em><strong>strlen()</strong></em></a></td>
+<td>Find the length of a string.</td>
+<td><code>size_t strlen(const char *s)</code></td>
+<td>terminate at <code>\0</code><br>(w/out counting <code>\0</code>)</td>
+</tr>
+
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strcpy/"><em><strong>strcpy()</strong></em></a></td>
+<td>Copy one string to another.</td>
+<td><code>char *strcpy(char *dest, const char *src)</code></td>
+<td>dest ← src</td>
+</tr>
+
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strcat/"><em><strong>strcat()</strong></em></a></td>
+<td>Concatenate two strings.</td>
+<td><code>char *strcat(char *dest, const char *src)</code></td>
+<td>dest = dest + src</td>
+</tr>
+
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strcmp/"><em><strong>strcmp()</strong></em></a></td>
+<td>Compare two strings.</td>
+<td><code>int strcmp(const char *s1, const char *s2)</code></td>
+<td>c1 &lt; c2 ? -1 : 1;<br>s1 = s2 : 0</td>
+</tr>
+
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strchr/"><em><strong>strchr()</strong></em></a></td>
+<td>Find the location of a <em>character</em> inside a <em>string</em>.</td>
+<td><code>char *strchr(const char *s, int c)</code></td>
+<td><strong>int c</strong> <em>(promotion)</em><br>for <a href="https://stackoverflow.com/questions/2394011/why-does-strchr-take-an-int-for-the-char-to-be-found">historical resaon</a></td>
+</tr>
+
+<tr>
+<td><a href="http://www.cplusplus.com/reference/cstring/strstr/"><em><strong>strstr()</strong></em></a></td>
+<td>Find the location of a <em>string</em> inside another <em>string</em>.</td>
+<td><code>char *strstr(const char *s1, const char *s2)</code></td>
+<td>return ptr to <strong>1st</strong> occurrence in s1</td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<hr />
+
+<h2 id="source-code">Source Code</h2>
+
+<ul>
+<li>Ref. <a href="https://github.com/torvalds/linux/blob/master/lib/string.c">linux/lib/string.c</a></li>
+<li><em>The n functions are all used as defensive coding against buffer overflows.</em> &mdash;<a href="https://stackoverflow.com/questions/1258550/why-should-you-use-strncpy-instead-of-strcpyhttps://stackoverflow.com/questions/1258550/why-should-you-use-strncpy-instead-of-strcpy">Stack Overflow</a></li>
+</ul>
+
+<h3 id="strlen"><strong>strlen()</strong></h3>
+
+<h4 id="strlen-1"><em>strlen()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRLEN
+/**
+ * strlen - Find the length of a string
+ * @s: The string to be sized
+ */
+size_t strlen(const char *s)
+{
+	const char *sc;
+
+	for (sc = s; *sc != '\0'; ++sc)
+		/* nothing */;
+	return sc - s;
+}
+EXPORT_SYMBOL(strlen);
+#endif
+</code></pre>
+
+<h4 id="strnlen"><em>strnlen()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNLEN
+/**
+ * strnlen - Find the length of a length-limited string
+ * @s: The string to be sized
+ * @count: The maximum number of bytes to search
+ */
+size_t strnlen(const char *s, size_t count)
+{
+	const char *sc;
+
+	for (sc = s; count-- &amp;&amp; *sc != '\0'; ++sc)
+		/* nothing */;
+	return sc - s;
+}
+EXPORT_SYMBOL(strnlen);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="strcpy"><strong>strcpy()</strong></h3>
+
+<h4 id="strcpy-1"><em>strcpy()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRCPY
+/**
+ * strcpy - Copy a %NUL terminated string
+ * @dest: Where to copy the string to
+ * @src: Where to copy the string from
+ */
+#undef strcpy
+char *strcpy(char *dest, const char *src)
+{
+	char *tmp = dest;
+
+	while ((*dest++ = *src++) != '\0')
+		/* nothing */;
+	return tmp;
+}
+EXPORT_SYMBOL(strcpy);
+#endif
+</code></pre>
+
+<h4 id="strncpy"><em>strncpy()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNCPY
+/**
+ * strncpy - Copy a length-limited, C-string
+ * @dest: Where to copy the string to
+ * @src: Where to copy the string from
+ * @count: The maximum number of bytes to copy
+ *
+ * The result is not %NUL-terminated if the source exceeds
+ * @count bytes.
+ *
+ * In the case where the length of @src is less than  that  of
+ * count, the remainder of @dest will be padded with %NUL.
+ *
+ */
+char *strncpy(char *dest, const char *src, size_t count)
+{
+	char *tmp = dest;
+
+	while (count) {
+		if ((*tmp = *src) != 0)
+			src++;
+		tmp++;
+		count--;
+	}
+	return dest;
+}
+EXPORT_SYMBOL(strncpy);
+#endif
+</code></pre>
+
+<h4 id="strlcpy"><em>strlcpy()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRLCPY
+/**
+ * strlcpy - Copy a C-string into a sized buffer
+ * @dest: Where to copy the string to
+ * @src: Where to copy the string from
+ * @size: size of destination buffer
+ *
+ * Compatible with ``*BSD``: the result is always a valid
+ * NUL-terminated string that fits in the buffer (unless,
+ * of course, the buffer size is zero). It does not pad
+ * out the result like strncpy() does.
+ */
+size_t strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t ret = strlen(src);
+
+	if (size) {
+		size_t len = (ret &gt;= size) ? size - 1 : ret;
+		memcpy(dest, src, len);
+		dest[len] = '\0';
+	}
+	return ret;
+}
+EXPORT_SYMBOL(strlcpy);
+#endif
+</code></pre>
+
+<h4 id="strscpy"><em>strscpy()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRSCPY
+/**
+ * strscpy - Copy a C-string into a sized buffer
+ * @dest: Where to copy the string to
+ * @src: Where to copy the string from
+ * @count: Size of destination buffer
+ *
+ * Copy the string, or as much of it as fits, into the dest buffer.
+ * The routine returns the number of characters copied (not including
+ * the trailing NUL) or -E2BIG if the destination buffer wasn't big enough.
+ * The behavior is undefined if the string buffers overlap.
+ * The destination buffer is always NUL terminated, unless it's zero-sized.
+ *
+ * Preferred to strlcpy() since the API doesn't require reading memory
+ * from the src string beyond the specified &quot;count&quot; bytes, and since
+ * the return value is easier to error-check than strlcpy()'s.
+ * In addition, the implementation is robust to the string changing out
+ * from underneath it, unlike the current strlcpy() implementation.
+ *
+ * Preferred to strncpy() since it always returns a valid string, and
+ * doesn't unnecessarily force the tail of the destination buffer to be
+ * zeroed.  If the zeroing is desired, it's likely cleaner to use strscpy()
+ * with an overflow test, then just memset() the tail of the dest buffer.
+ */
+ssize_t strscpy(char *dest, const char *src, size_t count)
+{
+	const struct word_at_a_time constants = WORD_AT_A_TIME_CONSTANTS;
+	size_t max = count;
+	long res = 0;
+
+	if (count == 0)
+		return -E2BIG;
+
+#ifdef CONFIG_HAVE_EFFICIENT_UNALIGNED_ACCESS
+	/*
+	 * If src is unaligned, don't cross a page boundary,
+	 * since we don't know if the next page is mapped.
+	 */
+	if ((long)src &amp; (sizeof(long) - 1)) {
+		size_t limit = PAGE_SIZE - ((long)src &amp; (PAGE_SIZE - 1));
+		if (limit &lt; max)
+			max = limit;
+	}
+#else
+	/* If src or dest is unaligned, don't do word-at-a-time. */
+	if (((long) dest | (long) src) &amp; (sizeof(long) - 1))
+		max = 0;
+#endif
+
+	while (max &gt;= sizeof(unsigned long)) {
+		unsigned long c, data;
+
+		c = read_word_at_a_time(src+res);
+		if (has_zero(c, &amp;data, &amp;constants)) {
+			data = prep_zero_mask(c, data, &amp;constants);
+			data = create_zero_mask(data);
+			*(unsigned long *)(dest+res) = c &amp; zero_bytemask(data);
+			return res + find_zero(data);
+		}
+		*(unsigned long *)(dest+res) = c;
+		res += sizeof(unsigned long);
+		count -= sizeof(unsigned long);
+		max -= sizeof(unsigned long);
+	}
+
+	while (count) {
+		char c;
+
+		c = src[res];
+		dest[res] = c;
+		if (!c)
+			return res;
+		res++;
+		count--;
+	}
+
+	/* Hit buffer length without finding a NUL; force NUL-termination. */
+	if (res)
+		dest[res-1] = '\0';
+
+	return -E2BIG;
+}
+EXPORT_SYMBOL(strscpy);
+#endif
+</code></pre>
+
+<h4 id="memcpy"><em>memcpy()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_MEMCPY
+/**
+ * memcpy - Copy one area of memory to another
+ * @dest: Where to copy to
+ * @src: Where to copy from
+ * @count: The size of the area.
+ *
+ * You should not use this function to access IO space, use memcpy_toio()
+ * or memcpy_fromio() instead.
+ */
+void *memcpy(void *dest, const void *src, size_t count)
+{
+	char *tmp = dest;
+	const char *s = src;
+
+	while (count--)
+		*tmp++ = *s++;
+	return dest;
+}
+EXPORT_SYMBOL(memcpy);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="strcat"><strong>strcat()</strong></h3>
+
+<h4 id="strcat-1"><em>strcat()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRCAT
+/**
+ * strcat - Append one %NUL-terminated string to another
+ * @dest: The string to be appended to
+ * @src: The string to append to it
+ */
+#undef strcat
+char *strcat(char *dest, const char *src)
+{
+	char *tmp = dest;
+
+	while (*dest)
+		dest++;
+	while ((*dest++ = *src++) != '\0')
+		;
+	return tmp;
+}
+EXPORT_SYMBOL(strcat);
+#endif
+</code></pre>
+
+<h4 id="strncat"><em>strncat()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNCAT
+/**
+ * strncat - Append a length-limited, C-string to another
+ * @dest: The string to be appended to
+ * @src: The string to append to it
+ * @count: The maximum numbers of bytes to copy
+ *
+ * Note that in contrast to strncpy(), strncat() ensures the result is
+ * terminated.
+ */
+char *strncat(char *dest, const char *src, size_t count)
+{
+	char *tmp = dest;
+
+	if (count) {
+		while (*dest)
+			dest++;
+		while ((*dest++ = *src++) != 0) {
+			if (--count == 0) {
+				*dest = '\0';
+				break;
+			}
+		}
+	}
+	return tmp;
+}
+EXPORT_SYMBOL(strncat);
+#endif
+</code></pre>
+
+<h4 id="strlcat"><em>strlcat()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRLCAT
+/**
+ * strlcat - Append a length-limited, C-string to another
+ * @dest: The string to be appended to
+ * @src: The string to append to it
+ * @count: The size of the destination buffer.
+ */
+size_t strlcat(char *dest, const char *src, size_t count)
+{
+	size_t dsize = strlen(dest);
+	size_t len = strlen(src);
+	size_t res = dsize + len;
+
+	/* This would be a bug */
+	BUG_ON(dsize &gt;= count);
+
+	dest += dsize;
+	count -= dsize;
+	if (len &gt;= count)
+		len = count-1;
+	memcpy(dest, src, len);
+	dest[len] = 0;
+	return res;
+}
+EXPORT_SYMBOL(strlcat);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="strcmp"><strong>strcmp()</strong></h3>
+
+<h4 id="strcmp-1"><em>strcmp()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRCMP
+/**
+ * strcmp - Compare two strings
+ * @cs: One string
+ * @ct: Another string
+ */
+#undef strcmp
+int strcmp(const char *cs, const char *ct)
+{
+	unsigned char c1, c2;
+
+	while (1) {
+		c1 = *cs++;
+		c2 = *ct++;
+		if (c1 != c2)
+			return c1 &lt; c2 ? -1 : 1;
+		if (!c1)
+			break;
+	}
+	return 0;
+}
+EXPORT_SYMBOL(strcmp);
+#endif
+</code></pre>
+
+<h4 id="strncmp"><em>strncmp()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNCMP
+/**
+ * strncmp - Compare two length-limited strings
+ * @cs: One string
+ * @ct: Another string
+ * @count: The maximum number of bytes to compare
+ */
+int strncmp(const char *cs, const char *ct, size_t count)
+{
+	unsigned char c1, c2;
+
+	while (count) {
+		c1 = *cs++;
+		c2 = *ct++;
+		if (c1 != c2)
+			return c1 &lt; c2 ? -1 : 1;
+		if (!c1)
+			break;
+		count--;
+	}
+	return 0;
+}
+EXPORT_SYMBOL(strncmp);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="strchr"><strong>strchr()</strong></h3>
+
+<ul>
+<li>Ref. <a href="https://linux.die.net/man/3/strchrnul">Linux man page</a>
+
+<ul>
+<li>The <em><strong>strchr()</strong></em> function returns a pointer to the <strong>first</strong> occurrence of the character c in the string s.</li>
+<li>The <em><strong>strrchr()</strong></em> function returns a pointer to the <strong>last</strong> occurrence of the character c in the string s.</li>
+<li>The <em><strong>strchrnul()</strong></em> function is like strchr() except that if c is not found in s, then it returns a pointer to the null byte at the end of s, rather than NULL.</li>
+<li>Here <em>character</em> means <em>byte</em>; these functions do not work with wide or multibyte characters.</li>
+<li>@ strchr for <em>Chinese character</em>?</li>
+</ul></li>
+</ul>
+
+<p><br></p>
+
+<h4 id="strchr-1"><em>strchr()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRCHR
+/**
+ * strchr - Find the first occurrence of a character in a string
+ * @s: The string to be searched
+ * @c: The character to search for
+ */
+char *strchr(const char *s, int c)
+{
+	for (; *s != (char)c; ++s)
+		if (*s == '\0')
+			return NULL;
+	return (char *)s;
+}
+EXPORT_SYMBOL(strchr);
+#endif
+</code></pre>
+
+<h4 id="strchrnul"><em>strchrnul()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRCHRNUL
+/**
+ * strchrnul - Find and return a character in a string, or end of string
+ * @s: The string to be searched
+ * @c: The character to search for
+ *
+ * Returns pointer to first occurrence of 'c' in s. If c is not found, then
+ * return a pointer to the null byte at the end of s.
+ */
+char *strchrnul(const char *s, int c)
+{
+	while (*s &amp;&amp; *s != (char)c)
+		s++;
+	return (char *)s;
+}
+EXPORT_SYMBOL(strchrnul);
+#endif
+</code></pre>
+
+<h4 id="strrchr"><em>strrchr()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRRCHR
+/**
+ * strrchr - Find the last occurrence of a character in a string
+ * @s: The string to be searched
+ * @c: The character to search for
+ */
+char *strrchr(const char *s, int c)
+{
+	const char *last = NULL;
+	do {
+		if (*s == (char)c)
+			last = s;
+	} while (*s++);
+	return (char *)last;
+}
+EXPORT_SYMBOL(strrchr);
+#endif
+</code></pre>
+
+<h4 id="strnchr"><em>strnchr()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNCHR
+/**
+ * strnchr - Find a character in a length limited string
+ * @s: The string to be searched
+ * @count: The number of characters to be searched
+ * @c: The character to search for
+ */
+char *strnchr(const char *s, size_t count, int c)
+{
+	for (; count-- &amp;&amp; *s != '\0'; ++s)
+		if (*s == (char)c)
+			return (char *)s;
+	return NULL;
+}
+EXPORT_SYMBOL(strnchr);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="strstr"><strong>strstr()</strong></h3>
+
+<h4 id="strstr-1"><em>strstr()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRSTR
+/**
+ * strstr - Find the first substring in a %NUL terminated string
+ * @s1: The string to be searched
+ * @s2: The string to search for
+ */
+char *strstr(const char *s1, const char *s2)
+{
+	size_t l1, l2;
+
+	l2 = strlen(s2);
+	if (!l2)
+		return (char *)s1;
+	l1 = strlen(s1);
+	while (l1 &gt;= l2) {
+		l1--;
+		if (!memcmp(s1, s2, l2))
+			return (char *)s1;
+		s1++;
+	}
+	return NULL;
+}
+EXPORT_SYMBOL(strstr);
+#endif
+</code></pre>
+
+<h4 id="strnstr"><em>strnstr()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_STRNSTR
+/**
+ * strnstr - Find the first substring in a length-limited string
+ * @s1: The string to be searched
+ * @s2: The string to search for
+ * @len: the maximum number of characters to search
+ */
+char *strnstr(const char *s1, const char *s2, size_t len)
+{
+	size_t l2;
+
+	l2 = strlen(s2);
+	if (!l2)
+		return (char *)s1;
+	while (len &gt;= l2) {
+		len--;
+		if (!memcmp(s1, s2, l2))
+			return (char *)s1;
+		s1++;
+	}
+	return NULL;
+}
+EXPORT_SYMBOL(strnstr);
+#endif
+</code></pre>
+
+<hr />
+
+<h3 id="memset"><strong>memset()</strong></h3>
+
+<h4 id="memset16"><em>memset16()</em></h4>
+
+<pre><code>#ifndef __HAVE_ARCH_MEMSET16
+/**
+ * memset16() - Fill a memory area with a uint16_t
+ * @s: Pointer to the start of the area.
+ * @v: The value to fill the area with
+ * @count: The number of values to store
+ *
+ * Differs from memset() in that it fills with a uint16_t instead
+ * of a byte.  Remember that @count is the number of uint16_ts to
+ * store, not the number of bytes.
+ */
+void *memset16(uint16_t *s, uint16_t v, size_t count)
+{
+	uint16_t *xs = s;
+
+	while (count--)
+		*xs++ = v;
+	return s;
+}
+EXPORT_SYMBOL(memset16);
+#endif
+</code></pre>
+
+<hr />
+
+<hr />
+
+<h1 id="todo">@TODO</h1>
+
+<ul>
+<li><p>[ ] Usage of string.h</p>
+
+<ul>
+<li><a href="http://www.gnu.org/software/libc/manual/html_node/String-and-Array-Utilities.html#String-and-Array-Utilities">http://www.gnu.org/software/libc/manual/html_node/String-and-Array-Utilities.html#String-and-Array-Utilities</a></li>
+</ul></li>
+
+<li><p><a href="p109."> </a> Filter?!</p></li>
+</ul>
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f06%2f16%2fc_string%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%5bC%5d%20Strings&amp;url=%2f2018%2f06%2f16%2fc_string%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2018%2f06%2f16%2fc_string%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2018%2f06%2f16%2fc_string%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f06%2f16%2fc_string%2f&amp;title=%5bC%5d%20Strings" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%5bC%5d%20Strings&amp;body=Check out this site %2f2018%2f06%2f16%2fc_string%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="/2018/06/15/book_head_first_c2/" title="[Book] Head First C (Part2)">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//your_disqus_shortname.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+</style>
+<div class="article-toc">
+  <br>
+  
+    <div class="section">
+      <header><div class="title">TableOfContents</div></header>
+      <div class="list-default"><nav id="TableOfContents">
+<ul>
+<li><a href="#usage-string-h">Usage: string.h</a>
+<ul>
+<li><a href="#source-code">Source Code</a>
+<ul>
+<li><a href="#strlen"><strong>strlen()</strong></a>
+<ul>
+<li><a href="#strlen-1"><em>strlen()</em></a></li>
+<li><a href="#strnlen"><em>strnlen()</em></a></li>
+</ul></li>
+<li><a href="#strcpy"><strong>strcpy()</strong></a>
+<ul>
+<li><a href="#strcpy-1"><em>strcpy()</em></a></li>
+<li><a href="#strncpy"><em>strncpy()</em></a></li>
+<li><a href="#strlcpy"><em>strlcpy()</em></a></li>
+<li><a href="#strscpy"><em>strscpy()</em></a></li>
+<li><a href="#memcpy"><em>memcpy()</em></a></li>
+</ul></li>
+<li><a href="#strcat"><strong>strcat()</strong></a>
+<ul>
+<li><a href="#strcat-1"><em>strcat()</em></a></li>
+<li><a href="#strncat"><em>strncat()</em></a></li>
+<li><a href="#strlcat"><em>strlcat()</em></a></li>
+</ul></li>
+<li><a href="#strcmp"><strong>strcmp()</strong></a>
+<ul>
+<li><a href="#strcmp-1"><em>strcmp()</em></a></li>
+<li><a href="#strncmp"><em>strncmp()</em></a></li>
+</ul></li>
+<li><a href="#strchr"><strong>strchr()</strong></a>
+<ul>
+<li><a href="#strchr-1"><em>strchr()</em></a></li>
+<li><a href="#strchrnul"><em>strchrnul()</em></a></li>
+<li><a href="#strrchr"><em>strrchr()</em></a></li>
+<li><a href="#strnchr"><em>strnchr()</em></a></li>
+</ul></li>
+<li><a href="#strstr"><strong>strstr()</strong></a>
+<ul>
+<li><a href="#strstr-1"><em>strstr()</em></a></li>
+<li><a href="#strnstr"><em>strnstr()</em></a></li>
+</ul></li>
+<li><a href="#memset"><strong>memset()</strong></a>
+<ul>
+<li><a href="#memset16"><em>memset16()</em></a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#todo">@TODO</a></li>
+</ul>
+</nav></div>
+    </div>
+    <hr>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="/2018/06/16/c_string/">[C] Strings</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/15/book_head_first_c2/">[Book] Head First C (Part2)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/09/c_datatype_sizeof/">[C] Data Type &amp; sizeof</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/blog_hugo/">[Blog] Hugo Notes</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/book_head_first_c1/">[Book] Head First C (Part1)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/c_printf_scanf/">[C] printf &amp; scanf</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/05/tech_vscode/">[Tech] VScode</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>Tags</b></div></header>
+
+        <div class="content">
+          <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/coding">Coding (6)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/c-programming">C programming (5)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/books">Books (2)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/blog">Blog (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/markdown">Markdown (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/tech">Tech (1)</a></li>
+            
+
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+  
+</div>
+    
+
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2018 Copypaste
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script src="/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER =  false , 
+EXPIRE_COOKIE =  5 , 
+SHOW_MODAL_TIMEOUT =  10000 , 
+MOUSE_LEAVE =  true , 
+MODAL_SIZE = "", 
+POST_URL = "https://zapier.com/hooks/...", 
+SIGNUP_HEADER = "Join Our Newsletter",
+HEADER_IMAGE = "//placehold.it/1000x600",
+IMG_DESCRIPTION = "Placeholder image for this popover modal optin form",
+SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.",
+INPUT_PLACEHOLDER = "Enter your email",
+SUBMIT_BUTTON = "Subscribe",
+SUCCESS_MESSAGE = "Thanks for your subscription!",
+ERROR_MESSAGE = "Submitting form failed!",
+OPTIN =  true ,
+COOKIE_NAME = "mycookie1",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

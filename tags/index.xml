@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Keep it up!</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Keep it up!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>iamsuperwen@gmail.com (iamsuperwen)</managingEditor>
+    <webMaster>iamsuperwen@gmail.com (iamsuperwen)</webMaster>
+    <copyright>(c) 2018 Copypaste</copyright>
+    <lastBuildDate>Wed, 06 Jun 2018 13:51:52 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Wed, 06 Jun 2018 13:51:52 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>/tags/books/</link>
+      <pubDate>Fri, 15 Jun 2018 15:16:01 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C Programming</title>
+      <link>/tags/c-programming/</link>
+      <pubDate>Sat, 16 Jun 2018 14:00:01 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/c-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>/tags/coding/</link>
+      <pubDate>Sat, 16 Jun 2018 14:00:01 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>/tags/markdown/</link>
+      <pubDate>Tue, 05 Jun 2018 03:15:48 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech</title>
+      <link>/tags/tech/</link>
+      <pubDate>Tue, 05 Jun 2018 03:15:48 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

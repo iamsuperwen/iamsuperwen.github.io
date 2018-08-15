@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>[C] printf &amp; scanf  &middot; Keep it up!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="C programming, Coding, ">
+
+
+<meta property="og:title" content="[C] printf &amp; scanf  &middot; Keep it up! ">
+<meta property="og:site_name" content="Keep it up!"/>
+<meta property="og:url" content="/2018/06/06/c_printf_scanf/" />
+<meta property="og:locale" content="en">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2018-06-06T11:30:18&#43;08:00" />
+<meta property="og:article:modified_time" content="2018-06-06T11:30:18&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="C programming">
+    
+<meta property="og:article:tag" content="Coding">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="[C] printf &amp; scanf" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="/2018/06/06/c_printf_scanf/" />
+<meta name="twitter:domain" content="/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "[C] printf &amp; scanf",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2018-06-06",
+    "description": "",
+    "wordCount": 562
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="/2018/06/06/c_printf_scanf/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.46" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="/css/bootswatch/flatly/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+  <link rel="stylesheet" href="/css/highlight/tomorrow-night-eighties.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+          
+          <a class="navbar-brand-img" href="/">
+            <img alt="" src="">
+            
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+              
+                <a href="/" >
+                  <i class='fa fa-folder-open-o'></i>
+                  Home
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/post/" >
+                  <i class='fa fa-tags'></i>
+                  Post
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/about/" >
+                  <i class='fa fa-hand-o-right'></i>
+                  About
+                </a>
+              
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="title-metas text-center">
+
+    <h1>[C] printf &amp; scanf
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2018-06-06">2018-06-06</time>
+</small>
+
+
+  <small>
+  &middot; 3 min read
+  &middot; (562 words)
+  
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="/tags/c-programming" class="label label-primary">C programming</a>
+  
+  <a href="/tags/coding" class="label label-primary">Coding</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+
+      <div class="content">
+  <ul>
+<li>printf <em>(format)</em></li>
+</ul>
+
+<p><img src="/images/20180606_printf_format.PNG" alt="alt text" title="Printf format" /></p>
+
+<ul>
+<li>scanf</li>
+</ul>
+
+<p></p>
+
+<hr />
+
+<h1 id="printf">printf</h1>
+
+<h2 id="specifier"><strong><em>specifier</em></strong></h2>
+
+<p><strong>%</strong>[flag][width][.precision][length]<strong><em>specifier</em></strong></p>
+
+<h3 id="integer">Integer</h3>
+
+<ul>
+<li><code>%d</code>, <code>%i</code>: signed int
+
+<ul>
+<li><code>%i</code> accept oct(8) or hex(16) in <strong><code>scanf</code></strong>; while <code>%d</code> read as dec(10)</li>
+<li>there&rsquo;s no <del><code>%D</code></del></li>
+</ul></li>
+<li><code>%u</code>: unsigned int</li>
+<li><code>%o</code>: unsigned int, in <strong>oct</strong>
+
+<ul>
+<li><strong>oct</strong>: <em><code>0___</code></em></li>
+<li>there&rsquo;s no <del><code>%O</code></del> (no letter as <em>hex</em>, eg. &lsquo;F&rsquo;)</li>
+</ul></li>
+<li><code>%x</code>, <code>%X</code>: unsigned int, in <strong>hex</strong>
+
+<ul>
+<li><strong>hex</strong>: <em><code>0X___</code></em></li>
+</ul></li>
+</ul>
+
+<h3 id="floating-number">Floating number</h3>
+
+<ul>
+<li><code>%f</code>, <code>%F</code>: double &amp; <em>float</em> @?
+
+<ul>
+<li><code>%f</code>: <em>inf, infinity, nan</em></li>
+<li><code>%F</code>: <em>INF, INFINITY, NAN</em></li>
+<li>@ <code>%lf</code>: double</li>
+<li>@Note: <code>123.0f</code>&ndash;&gt;float;  <code>123.0</code>&ndash;&gt;double</li>
+</ul></li>
+<li><code>%e</code>, <code>%E</code>: double &amp; float in <em>exponential notation</em></li>
+<li><code>%g</code>, <code>%G</code>: double &amp; float in <em>either normal(<code>%f</code>) or exponential(<code>%e</code>) format</em></li>
+<li>@<code>%a</code>, <code>%A</code>: hexadecimal floating-point
+
+<ul>
+<li>@ Ref. <a href="https://stackoverflow.com/questions/21882862/purpose-of-hexadecimal-floating-point-value">Purpose of hexadecimal floating point</a></li>
+</ul></li>
+</ul>
+
+<h4 id="experiment">@Experiment</h4>
+
+<pre><code>  double dp = 123.456;
+  printf(&quot;%%f: %f\t\t\t%%F: %F\n&quot;, dp, dp);
+  printf(&quot;%%e: %e\t\t%%E: %E\n&quot;, dp, dp);
+  printf(&quot;%%g: %g\t\t\t%%G: %G\n&quot;, dp, dp);
+  printf(&quot;%%a: %a\t%%A: %A\n\n&quot;, dp, dp);
+</code></pre>
+
+<ul>
+<li><strong>Result</strong></li>
+</ul>
+
+<pre><code>  %f: 123.456000                  %F: 123.456000
+  %e: 1.234560e+02                %E: 1.234560E+02
+  %g: 123.456                     %G: 123.456
+  %a: 0x1.edd2f1a9fbe77p+6        %A: 0X1.EDD2F1A9FBE77P+6
+</code></pre>
+
+<h3 id="others">Others</h3>
+
+<ul>
+<li><code>%c</code>: char</li>
+<li><code>%s</code>: (null-terminated) string</li>
+<li><code>%p</code>: pointer address
+
+<ul>
+<li><a href="http://edisonx.pixnet.net/blog/post/35305668-%5Bc%5D-printf-%E5%BC%95%E6%95%B8%E8%AA%AA%E6%98%8E">Ref.2</a>:
+<code>int a=0, printf(&quot;%p&quot;, &amp;a);</code> == <code>printf(&quot;%08x&quot;, &amp;a);</code></li>
+<li>@ <a href="https://www.viva64.com/en/k/0019/">%p v.s. %x</a></li>
+</ul></li>
+<li>@<code>%n</code>: ?? <a href="http://edisonx.pixnet.net/blog/post/35305668-%5Bc%5D-printf-%E5%BC%95%E6%95%B8%E8%AA%AA%E6%98%8E">1. nothing?</a>  <a href="https://en.wikipedia.org/wiki/Printf_format_string">2. buffer?</a></li>
+</ul>
+
+<h3 id="flags">[flags]</h3>
+
+<ul>
+<li><p><code>+</code>: print + for positive number.</p>
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;%+d\n&quot;, 10); //output: +10
+</code></li>
+</ul></li>
+
+<li><p><code>-</code>: Left-align <strong>(default: right-align)</strong></p></li>
+
+<li><p><code>0</code>: left-pads number with zeros.</p>
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;%06d \n&quot;, 1234); //output: 001234
+</code></li>
+</ul></li>
+
+<li><p><code>#</code>: <em>o, x, X</em> (oct, hex) lead with (0, 0x)</p></li>
+</ul>
+
+<h2 id="width">[width]</h2>
+
+<ul>
+<li><p>Minimum char to be printed.</p>
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;%06d \n&quot;, 1234); //output: 001234 --&gt; Width=6
+</code></li>
+</ul></li>
+
+<li><p><code>*</code>: width value pass as an an argument.</p>
+
+<ul>
+<li><p>Eg 1.</p>
+
+<pre><code>printf(&quot;Width trick: %0*d \n&quot;, 5, 10); // pad with '0'
+printf(&quot;Width trick: %+*d \n&quot;, 5, 10); //'+' for positive
+printf(&quot;Width trick: %-*d \n&quot;, 5, 10); // left-align
+printf(&quot;Width trick: %*d \n&quot;, 5, 10);  // '*' pass as argument
+</code></pre></li>
+
+<li><p>Output.
+<img src="/images/20180604_aligned.PNG" alt="alt text" title="Width aligned results" /></p></li>
+
+<li><p>Eg 2. <code>+</code> can be used with (<code>0</code> &lt;-&gt; <code>-</code>)</p>
+
+<pre><code>printf(&quot;%0+8.2lf\n&quot;, 3.14567);
+printf(&quot;%-+8.2lf\n&quot;, 3.14567);
+printf(&quot;%+8.2lf\n&quot;, 3.14567);
+</code></pre></li>
+
+<li><p>Output.
+<img src="/images/20180607_format_flag_together.PNG" alt="alt text" title="Width aligned results" /></p></li>
+</ul></li>
+</ul>
+
+<h2 id="precision">[.precision]</h2>
+
+<ul>
+<li>Digits printed behind the dot(.)
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;%05.2f  %+.0e  %E\n&quot;, 3.1416, 3.1416, 3.1416); //output: 03.14  +3e+00  3.141600E+00
+</code></li>
+</ul></li>
+<li>Precision can be passed as arguments as well.
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;%0*.*f\n\n&quot;,10,1, 12.455);  //output: 00000012.5
+</code></li>
+</ul></li>
+</ul>
+
+<h2 id="length">[length] @?</h2>
+
+<ul>
+<li><code>h</code>: int &ndash;&gt; char</li>
+<li><code>hh</code>: int &ndash;&gt; short</li>
+<li><code>l</code>: int &ndash;&gt; long</li>
+<li><code>ll</code>: int &ndash;&gt; long long</li>
+</ul>
+
+<h2 id="special-character">Special Character</h2>
+
+<ul>
+<li><code>\t</code>: tab</li>
+<li><code>\n</code>: newline</li>
+<li><code>\0</code>: null char
+
+<ul>
+<li>Eg.
+<code>
+printf(&quot;before null \0 after null\n&quot;);  //output: before null 
+</code>
+<em>[not newline, same line]</em></li>
+</ul></li>
+<li><code>\b</code>: backspace
+
+<ul>
+<li>ASCII = 8</li>
+<li>Eg.
+<code>
+printf(&quot;code\b academy\n&quot;);  //output: cod academy
+</code></li>
+</ul></li>
+<li><code>\r</code>: carriage return
+
+<ul>
+<li>ASCII = 13</li>
+<li>Eg.
+<code>
+printf(&quot;dog lover\rkitty\n&quot;);  //output: kittyover
+</code></li>
+</ul></li>
+<li><code>\f</code>: formfeed
+
+<ul>
+<li>ASCII = 12</li>
+<li>Eg.
+<code>
+printf(&quot;abcde\fghi\ffff\n&quot;);
+</code></li>
+<li>Output.
+<img src="/images/20180609_formfeed_result.PNG" alt="alt text" title="formfeed result" /></li>
+</ul></li>
+<li><code>\a</code>: alert beeping sound.</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="sprintf">sprintf</h3>
+
+<p>dd</p>
+
+<h3 id="snprintf">snprintf</h3>
+
+<p>d</p>
+
+<h2 id="ref">Ref</h2>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Printf_format_string">printf format string - Wikipedia</a></li>
+<li><a href="http://edisonx.pixnet.net/blog/post/35305668-%5Bc%5D-printf-%E5%BC%95%E6%95%B8%E8%AA%AA%E6%98%8E">printf 引數說明 - Edison.X.</a></li>
+<li><a href="http://www.cplusplus.com/reference/cstdio/printf/">printf - C++ Reference</a></li>
+<li><a href="http://web.mit.edu/10.001/Web/Course_Notes/c_Notes/tips_printf.html">Tips on printf - MIT</a></li>
+</ol>
+
+<h2 id="examples-questions">@Examples &amp; Questions</h2>
+
+<ul>
+<li><p>Rounding (四捨五入) for floating point precision.</p>
+
+<ul>
+<li><p>Eg.</p>
+
+<pre><code>printf(&quot;%.1f\n\n&quot;, 12.44);  //output: 12.4
+printf(&quot;%.1f\n\n&quot;, 12.45);  //*** output: 12.4 ***
+printf(&quot;%.1f\n\n&quot;, 12.4500001);  //output: 12.5
+</code></pre></li>
+
+<li><p><em>Interesting &hellip; Hmmm&hellip;</em></p></li>
+</ul></li>
+
+<li><p>printf different types (unsigned, dec, oct, hex)</p>
+
+<ul>
+<li><p>Eg.</p>
+
+<pre><code>int n = -15;
+int p = 15;
+printf(&quot;%d %u %#o %X\n&quot;, p, p, p, p);  //output: 15 15 017 F
+printf(&quot;%d %u %#o %#X\n&quot;, n, n, n, n);  //output: -15 4294967281 037777777761 0XFFFFFFF1
+</code></pre></li>
+
+<li><p>Result.</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">dec</th>
+<th align="right">unsigned dec <code>%u</code></th>
+<th align="right">unsigned oct <code>%o</code></th>
+<th align="right">unsigned hex <code>%X</code></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">15</td>
+<td align="right">15</td>
+<td align="right">017</td>
+<td align="right">F</td>
+</tr>
+
+<tr>
+<td align="center">-15</td>
+<td align="right">4294967281</td>
+<td align="right">037777777761</td>
+<td align="right">0XFFFFFFF1</td>
+</tr>
+
+<tr>
+<td align="center">(+)</td>
+<td align="right">4294967296</td>
+<td align="right">040000000000</td>
+<td align="right">0X100000000</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+
+<hr />
+
+<hr />
+
+<ul>
+<li>Usage: sprintf</li>
+</ul>
+
+<p>AAA</p>
+
+<hr />
+
+<hr />
+
+<ul>
+<li>printf, puts, scanf, gets &ndash;&gt; gets_s()</li>
+</ul>
+
+<p>BBB</p>
+
+<hr />
+
+<hr />
+
+<h1 id="scanf">scanf</h1>
+
+<h2 id="ref-1">Ref</h2>
+
+<ol>
+<li><a href="http://edisonx.pixnet.net/blog/post/35584182-%5Bc%5D-scanf-%E5%BC%95%E6%95%B8%E8%AA%AA%E6%98%8E">[C] scanf 引數說明 - Edison.X.</a></li>
+<li><a href="http://edisonx.pixnet.net/blog/post/74516127-%5Bc&amp;++%5D-scanf-%E9%80%B2%E9%9A%8E%E7%94%A8%E6%B3%95">[C&amp;++]scanf進階用法 - Edison.X</a></li>
+</ol>
+
+<h1 id="todo">@TODO</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> <a href="#length">length parts</a>: eg. short&hellip;</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> printf specifier &ndash;&gt; sprintf</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> printf, puts, scanf, gets &ndash;&gt; gets_s()
+
+<ul>
+<li><a href="https://www.geeksforgeeks.org/problem-with-scanf-when-there-is-fgetsgetsscanf-after-it/">https://www.geeksforgeeks.org/problem-with-scanf-when-there-is-fgetsgetsscanf-after-it/</a></li>
+</ul></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Trace printf code
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/50771351/ascii-value-0-and-0">My stackoverflow Question</a></li>
+<li><a href="https://github.com/lattera/glibc/blob/master/stdio-common/printf.c">https://github.com/lattera/glibc/blob/master/stdio-common/printf.c</a></li>
+<li><a href="https://stackoverflow.com/questions/2457656/understanding-the-hardware-of-printf">https://stackoverflow.com/questions/2457656/understanding-the-hardware-of-printf</a></li>
+</ul></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> in ANKI</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> change list to table?</label></li>
+</ul>
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f06%2f06%2fc_printf_scanf%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=%5bC%5d%20printf%20%26%20scanf&amp;url=%2f2018%2f06%2f06%2fc_printf_scanf%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2018%2f06%2f06%2fc_printf_scanf%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2018%2f06%2f06%2fc_printf_scanf%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f06%2f06%2fc_printf_scanf%2f&amp;title=%5bC%5d%20printf%20%26%20scanf" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=%5bC%5d%20printf%20%26%20scanf&amp;body=Check out this site %2f2018%2f06%2f06%2fc_printf_scanf%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="/2018/06/05/tech_vscode/" title="[Tech] VScode">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="/2018/06/06/book_head_first_c1/" title="[Book] Head First C (Part1)">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//your_disqus_shortname.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        
+</style>
+<div class="article-toc">
+  <br>
+  
+    <div class="section">
+      <header><div class="title">TableOfContents</div></header>
+      <div class="list-default"><nav id="TableOfContents">
+<ul>
+<li><a href="#printf">printf</a>
+<ul>
+<li><a href="#specifier"><strong><em>specifier</em></strong></a>
+<ul>
+<li><a href="#integer">Integer</a></li>
+<li><a href="#floating-number">Floating number</a>
+<ul>
+<li><a href="#experiment">@Experiment</a></li>
+</ul></li>
+<li><a href="#others">Others</a></li>
+<li><a href="#flags">[flags]</a></li>
+</ul></li>
+<li><a href="#width">[width]</a></li>
+<li><a href="#precision">[.precision]</a></li>
+<li><a href="#length">[length] @?</a></li>
+<li><a href="#special-character">Special Character</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#sprintf">sprintf</a></li>
+<li><a href="#snprintf">snprintf</a></li>
+</ul></li>
+<li><a href="#ref">Ref</a></li>
+<li><a href="#examples-questions">@Examples &amp; Questions</a></li>
+</ul></li>
+<li><a href="#scanf">scanf</a>
+<ul>
+<li><a href="#ref-1">Ref</a></li>
+</ul></li>
+<li><a href="#todo">@TODO</a></li>
+</ul>
+</nav></div>
+    </div>
+    <hr>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="/2018/06/16/c_string/">[C] Strings</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/15/book_head_first_c2/">[Book] Head First C (Part2)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/09/c_datatype_sizeof/">[C] Data Type &amp; sizeof</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/blog_hugo/">[Blog] Hugo Notes</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/book_head_first_c1/">[Book] Head First C (Part1)</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/06/c_printf_scanf/">[C] printf &amp; scanf</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/05/tech_vscode/">[Tech] VScode</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>Tags</b></div></header>
+
+        <div class="content">
+          <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/coding">Coding (6)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/c-programming">C programming (5)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/books">Books (2)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/blog">Blog (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/markdown">Markdown (1)</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+                
+              
+              
+            
+              
+              
+              
+            
+              <li><a href="/tags/tech">Tech (1)</a></li>
+            
+
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+  
+</div>
+    
+
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2018 Copypaste
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="" async="async"></script>
+
+
+
+<script src="//load.sumome.com/" data-sumo-site-id="" async="async"></script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script src="/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER =  false , 
+EXPIRE_COOKIE =  5 , 
+SHOW_MODAL_TIMEOUT =  10000 , 
+MOUSE_LEAVE =  true , 
+MODAL_SIZE = "", 
+POST_URL = "https://zapier.com/hooks/...", 
+SIGNUP_HEADER = "Join Our Newsletter",
+HEADER_IMAGE = "//placehold.it/1000x600",
+IMG_DESCRIPTION = "Placeholder image for this popover modal optin form",
+SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.",
+INPUT_PLACEHOLDER = "Enter your email",
+SUBMIT_BUTTON = "Subscribe",
+SUCCESS_MESSAGE = "Thanks for your subscription!",
+ERROR_MESSAGE = "Submitting form failed!",
+OPTIN =  true ,
+COOKIE_NAME = "mycookie1",
+CONTENTLANGUAGE = ""; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax//config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

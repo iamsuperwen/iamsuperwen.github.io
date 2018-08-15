@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Keep it up!</title>
+    <link>/tags/blog/</link>
+    <description>Recent content in Blog on Keep it up!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>iamsuperwen@gmail.com (iamsuperwen)</managingEditor>
+    <webMaster>iamsuperwen@gmail.com (iamsuperwen)</webMaster>
+    <copyright>(c) 2018 Copypaste</copyright>
+    <lastBuildDate>Wed, 06 Jun 2018 13:51:52 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Blog] Hugo Notes</title>
+      <link>/2018/06/06/blog_hugo/</link>
+      <pubDate>Wed, 06 Jun 2018 13:51:52 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/06/blog_hugo/</guid>
+      <description>&lt;p&gt;Documenting the blogging process.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

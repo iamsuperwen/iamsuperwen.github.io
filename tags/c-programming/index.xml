@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C Programming on Keep it up!</title>
+    <link>/tags/c-programming/</link>
+    <description>Recent content in C Programming on Keep it up!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>iamsuperwen@gmail.com (iamsuperwen)</managingEditor>
+    <webMaster>iamsuperwen@gmail.com (iamsuperwen)</webMaster>
+    <copyright>(c) 2018 Copypaste</copyright>
+    <lastBuildDate>Sat, 16 Jun 2018 14:00:01 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/c-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[C] Strings</title>
+      <link>/2018/06/16/c_string/</link>
+      <pubDate>Sat, 16 Jun 2018 14:00:01 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/16/c_string/</guid>
+      <description>&lt;p&gt;String in C.
+&lt;br&gt;Extended from &lt;strong&gt;&lt;em&gt;Head First C&lt;/em&gt;&lt;/strong&gt;, Chap 2.5 - Strings.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Book] Head First C (Part2)</title>
+      <link>/2018/06/15/book_head_first_c2/</link>
+      <pubDate>Fri, 15 Jun 2018 15:16:01 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/15/book_head_first_c2/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2.5.Strings @[]&lt;/li&gt;
+&lt;li&gt;3.Create Small Tools
+
+&lt;ul&gt;
+&lt;li&gt;stream (Std stream: stdin, stdout, stderr)&lt;/li&gt;
+&lt;li&gt;command-line arguments&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;4.Multiple Source Files
+
+&lt;ul&gt;
+&lt;li&gt;Data Type @[]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[C] Data Type &amp; sizeof</title>
+      <link>/2018/06/09/c_datatype_sizeof/</link>
+      <pubDate>Sat, 09 Jun 2018 00:32:56 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/09/c_datatype_sizeof/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Data Type&lt;/li&gt;
+&lt;li&gt;Floating points Concept&lt;/li&gt;
+&lt;li&gt;sizeof()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Book] Head First C (Part1)</title>
+      <link>/2018/06/06/book_head_first_c1/</link>
+      <pubDate>Wed, 06 Jun 2018 11:59:30 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/06/book_head_first_c1/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;0.Intro.&lt;/li&gt;
+&lt;li&gt;1.Getting Started with C&lt;/li&gt;
+&lt;li&gt;2.Memory &amp;amp; Pointers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[C] printf &amp; scanf</title>
+      <link>/2018/06/06/c_printf_scanf/</link>
+      <pubDate>Wed, 06 Jun 2018 11:30:18 +0800</pubDate>
+      <author>iamsuperwen@gmail.com (iamsuperwen)</author>
+      <guid>/2018/06/06/c_printf_scanf/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;printf &lt;em&gt;(format)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/20180606_printf_format.PNG&#34; alt=&#34;alt text&#34; title=&#34;Printf format&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;scanf&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
